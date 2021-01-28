@@ -5,7 +5,9 @@
 
 ## The first dataset in which we are working is heart.csv which contains the data to determinate if a patient has or not a heart disease. This is a supervised ML problem since it is a classification. 
 
-### 1 - Loading the data
+## Heart Disease
+
+### 1 - Loading the data for predicting a heart Disease
 
 All datasets used in this project are the datasets directory. Those are kaggle datasets but a little modified in order to work better with our models. The first thing we are trying to do is to run a PCA algorith to determinate the features that are the best to predict a result
 
@@ -18,3 +20,37 @@ The advantage of IPCA it's that is better for running in computers with limited 
 ### 3 - USING KPCA
 
 We used the KernelPA to project the data into a higher dimensional space. We observed that the performance was quite similar to the preovius PCA's
+
+## Happiness
+
+### 1 - Loading the data
+
+We load the data of the dataset felicidad.csv
+
+### 2 - Selection of models
+
+Since what we are trying to predict is the happinnes score of people for the people fo a country giving certain metrics, it is convinient to use a Regression because it is a continuous variable that we are trying to predict
+We tried with three common regression models:
+
+    - Linear Regression
+    - Lasso Regression
+    - Ridge regression
+
+### 3 - Implementation of models
+
+To train the models we instantie each one of them, we pass the data as parameters. Alpha parameter is the inidicator of the penalty that the model will suffer for unnacurate predictions. Also, we implemented "mean squarred error" as our metric for the loss.
+
+### 4 - Conclusions
+
+We observed that all of the models have a accuracy of above 90%, however, Linear seems to have a loss a lot smaller and Lasso gives tecnichally 0 relevance to the feature "corruption", opposed to Linear.
+Also, if we take a look carefully we can see that Linear takes every feature as almost equal important
+It seems that the best option for this problem is the Linear Model
+
+** It is important to mention that Lasso and Ridge apply regularization to the data **
+
+
+## Happines with Robust regression
+Robust regression algorithms allow to perform a good estimation even with outliers in our data, but we don't have to worry about dealing with them. These estimators do that work for us. in Robust.py there is an implementation of such models and in the folder robusts there are the plots with that compare the predicted values to the expected ones
+
+    - Hubber Regressor penalizes the atipical values found during training, giving them less important. To determinate if a value is atipic or not is if they overpass the given value epsilon. 1.35 is the value widely recommended
+    - Ransac train in little batches and assumes that they all are not atypical values. When this algorithm identifies the atypical values it gets them out of the training set for the model

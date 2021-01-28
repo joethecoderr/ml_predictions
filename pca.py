@@ -4,9 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.decomposition import IncrementalPCA
 from sklearn.decomposition import KernelPCA
- 
 from sklearn.linear_model import LogisticRegression
- 
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
@@ -21,7 +19,8 @@ if __name__ == '__main__':
     ipca = IncrementalPCA(n_components =  3, batch_size =  10)
     ipca.fit(X_train)
     # plt.plot(range(len(pca.explained_variance_)), pca.explained_variance_ratio_)
-    # plt.savefig('fig.png')
+    # plt.savefig('fig2.png')
+    #plt.show()
     logistic = LogisticRegression(solver='lbfgs')
     dt_train = pca.transform(X_train)
     dt_test = pca.transform(X_test)
@@ -41,4 +40,9 @@ if __name__ == '__main__':
     logistic = LogisticRegression(solver='lbfgs')
     logistic.fit(dt_train, y_train)
     print('SCORE KPCA: ', logistic.score(dt_test, y_test))
+
+    # num_features = dt_heart[['age', 'trestbps', 'thalach', 'oldpeak']]
+    # plt.figure(figsize=(10,7))
+    # plt.boxplot(num_features)
+    # plt.savefig('fig3.png')
 
