@@ -16,6 +16,6 @@ class Utils:
         y = dataset[y]
         return X,y
 
-    def model_export(self, clf, score):
+    def model_export(self, clf, score, dataset_name):
         print(score)
-        joblib.dump(clf, f'./models/best_model_score{score}.pkl')
+        joblib.dump(clf, f'./models/best_model_score_{round(score,4)}_{dataset_name}.pkl')

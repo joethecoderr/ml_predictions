@@ -52,3 +52,15 @@ if __name__ == '__main__':
         print('Accuracy: ' , accuracy_score(y_test, prediction))
 
 
+    """cp = chest pain type range(0,3)
+       trestbps = resting blood pressure
+       chol = cholestorel in mg/dl
+       fbs = fasting blood sugar if fbs > 120 then true
+       restecg = resting electrocardiograhic results (1,0)
+       exercise induced angina
+       thalach = max heart rate achieved
+       oldpeak = ST depression induced by exercise (continuous value)
+       slope range(0,2)
+       ca = number of major vessels range(0,3)
+       thal = 1 == normal, 2 == fixed defect, 3 == reversable defect  (blood desorder, not enough hemogoblin)
+    """
