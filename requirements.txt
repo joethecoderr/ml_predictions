@@ -5,5 +5,5 @@ pandas
 matplotlib
 scikit-learn
 seaborn
-flask
+Flask
 gunicorn
