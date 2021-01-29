@@ -54,3 +54,18 @@ Robust regression algorithms allow to perform a good estimation even with outlie
 
     - Hubber Regressor penalizes the atipical values found during training, giving them less important. To determinate if a value is atipic or not is if they overpass the given value epsilon. 1.35 is the value widely recommended
     - Ransac train in little batches and assumes that they all are not atypical values. When this algorithm identifies the atypical values it gets them out of the training set for the model
+
+## Heart disease with bagging techniques
+A bagging classifier ir an ensemble meta-estimator that fits base clasiffiers with random subsets o the data, compare their individual predictions and choses a final predictions, this could be done by taking the mean of all predictions or by voting
+
+## Clustering
+For classification problems with no labeled data it is a good option to apply clusterization techniques.  
+Algotithms like KMeans or Meanshift are good options
+We used the candy dataset to classify each candy in a cluster according to its propierties
+KMEans can be a better choice you do now how many clusters you should have as result, when you don't know that information you may wan to explore Meanshift
+
+## Crossvalidation
+Crossvalidation it is a better way to test and validate your models. There are two options for crossvalidation:  
+    - K-Folds
+    - LOOCV
+LOOCV it is a lot more intensive and requires much more resources than K-Folds. However, if you have limited data this could be a good choice

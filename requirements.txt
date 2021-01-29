@@ -4,3 +4,5 @@ joblib
 pandas
 matplotlib
 scikit-learn
+seaborn
+flask
