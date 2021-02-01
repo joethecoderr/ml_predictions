@@ -1,9 +1,19 @@
-# Welcome to my first machine learning project that it is not just a jupyter Notebook
+# What will you find in this repo?
+    - Experiments I've  been running regarding ML models. In the "test models" directory you will find some explorations an test that I did. The same with the plots directory in which you will find some plots I ran in order to analyze the data
+    - In main.py you will find the core of the flask app. There you will find a route that consumes the previously trained model for predicting a heart disease. 
+    - In models.py you will find the class that trains the models. This file will have modifications in the near future to adapt it to train models depending on if it is a classification or regression problem
+# What is currently working?
+A predictor for heart disease. 
+# How it was trained?
+Using the heart.csv dataset attached in this repo. For training it was used bagging technique along with GridSearch with the purpose of finding the model and hyperparameters that gives the best performance. 
+
 
 #### The packages for this project are in the requirements.txt file so you just have to run pip install -r requirements.txt
 #### run_app.sh it is a shortcut to activate the venv (I advice you to name it venv) and run the app
 
-## The first dataset in which we are working is heart.csv which contains the data to determinate if a patient has or not a heart disease. This is a supervised ML problem since it is a classification. 
+# The following lines are annotations that I did during the exploration and experimentation with the models
+
+### The first dataset in which we are working is heart.csv which contains the data to determinate if a patient has or not a heart disease. This is a supervised ML problem since it is a classification. 
 
 ## Heart Disease
 

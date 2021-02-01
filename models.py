@@ -11,22 +11,12 @@ warnings.simplefilter("ignore")
 class Models:
     def __init__(self):
         self.reg = {
-            # 'SVR': SVR(),
-            # 'GRADIENT': GradientBoostingRegressor(),
              'FORREST' : RandomForestRegressor(),
              'LinearSVC': LinearSVC(),
              'GradientClass' : GradientBoostingClassifier()
         }
         self.params = {
-            # 'SVR' : {
-            #     'kernel' : ['linear', 'poly', 'rbf'],
-            #     'gamma' : ['auto', 'scale'],
-            #     'C' : [1,5,10]
-            # },
-            # 'GRADIENT' : {
-            #     'loss' : ['ls', 'lad'],
-            #     'learning_rate' : [0.01, 0.05, 0.1]
-            # },
+
             'FORREST' : {
                 'n_estimators' : range(6,11),
                 'criterion' : ['mse', 'mae'],
